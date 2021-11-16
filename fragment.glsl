@@ -13,5 +13,5 @@ void main()
     float intensity = max(dot(L, normal),0.0);
     gl_FragColor.rgb = intensity * tex_color * gl_LightSource[0].diffuse.rgb + gl_FrontMaterial.ambient.rgb * gl_LightSource[0].ambient.rgb;
     gl_FragColor.a = 1.0;
-    gl_Fragcolor = texture2D(tex, gl_TexCoord[0].st);
+    gl_Fragcolor = tex_color;
 }
